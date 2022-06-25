@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Druk-Wide-Cy-Web-Medium-Regular";
+  src: url("./assets/fonts/Druk-Wide-Cy-Web-Medium-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DrukWide-Heavy";
+  src: url("./assets/fonts/DrukWide-Heavy.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+::root {
+  --primary-white-clr         : #fff;
+  --primary-orange-clr        : #9c7443;
+  --primaray-blacker-clr      : #000;
+  --primary-black             : #212121 ;
+  --light-silver-color        : rgba(255, 255, 255, .5);
+  --primary-bg-gradient       : radial-gradient(circle at 50%, transparent 50%, #000 100%), linear-gradient(to top, #0c0c0c 0%, #1e1e1e 100%); 
+  --primary-bg-silver-gradient: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
+}
+
+body {
+  font-family     : 'Druk-Wide-Cy-Web-Medium-Regular', Helvetica, sans-serif;
+  background-image: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
+  overflow        : hidden;
+  width           : 100vw;
+}
+
+.App {
+  background-image : radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
+  height           : 100vh;
+  text-align       : center;
+  color            :palevioletred;
+  width: 100vw;
+}
+
+.App::before {
+    position           : absolute;
+    top                : -100%;
+    left               : -40%;
+    height             : 300%;
+    width              : 300%;
+    content            : "";
+    z-index            : 0;
+    opacity            : .15;
+    pointer-events     : none;
+    background-image   : url('./assets/images/noise@2x.33312e6e.png');
+    background-repeat  : repeat;
+    background-position: 0 0;
+    background-size    : 200px auto;
+    animation          : noisy 1s steps(10) infinite;
+}
+
+@keyframes noisy {
+     0%, 100% { transform: translate(0, 0); }
+     10% { transform: translate(-5%, -10%); }
+     20% { transform: translate(-15%, 5%); }
+     30% { transform: translate(7%, -25%); }
+     40% { transform: translate(-5%, 25%); }
+     50% { transform: translate(-15%, 10%); }
+     60% { transform: translate(15%, 0%); }
+     70% { transform: translate(0%, 15%); }
+     80% { transform: translate(3%, 35%); }
+     90% { transform: translate(-10%, 10%); }
+}
+
+

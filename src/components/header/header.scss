@@ -1,0 +1,14 @@
+.header {
+   position     : fixed;
+   height       : auto;
+   width        : 100vw;
+   display      : flex;
+   align-items  : center;
+   padding-top  : 5vw;
+   padding-left : 4.2vw;
+   padding-right: 4.2vw;
+}
+
+.logo {
+   display: none;
+}
