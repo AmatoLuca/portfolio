@@ -7,10 +7,10 @@
    align-items     : center;
    justify-content : center;
    margin-left     : auto;
-   transition: all 0.7s cubic-bezier(.165,.84,.44,1);
+   transition      : all 0.7s cubic-bezier(.165,.84,.44,1);
 
    &:hover {
-      background-color: #000;
+      background-color: #000; 
 
       span {
          background-color: #fff;
@@ -23,12 +23,17 @@
    width          : 16px;
    display        : flex;
    flex-direction : column;
-   justify-content: space-between;
+   justify-content: center;
 
    span {
-      width           : 100%;
+      width: 100%;
       height          : 2px;
       display         : block;
       background-color: #000;
    }
+}
+
+.hamb-line-2, 
+.hamb-line-3 {
+   margin-top: 2.5px;
 }
