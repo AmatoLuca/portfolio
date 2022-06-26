@@ -7,6 +7,15 @@
    align-items     : center;
    justify-content : center;
    margin-left     : auto;
+   transition: all 0.7s cubic-bezier(.165,.84,.44,1);
+
+   &:hover {
+      background-color: #000;
+
+      span {
+         background-color: #fff;
+      }
+   }
 }
 
 .burger-button__content {

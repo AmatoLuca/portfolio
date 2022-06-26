@@ -1,0 +1,19 @@
+.logo {
+   color: #fff;
+
+   span {
+      display: inline-block;
+      font-size: 14px;
+      margin: 0 .5px;
+   }
+
+   .reverse-letter {
+      transform: rotate(180deg) translateY(-10%) !important;
+      
+   }
+}
+
+.logo_blank-space {
+   width: .10rem !important;     
+}
+
