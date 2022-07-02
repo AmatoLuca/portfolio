@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Logo from "../components/header/Logo";
 import Hamburger from "../components/header/Hamburger";
+import NavMobile from "../components/header/NavMobile"
+import { NavMenuContext } from "../contexts/NavMenuContext"
 
 /* 
    in questo componente metterò un event listener per monitorare 
@@ -12,10 +14,18 @@ import Hamburger from "../components/header/Hamburger";
 */
 
 const HeaderController = () => {
+
+  const menuContext = useContext(NavMenuContext)
+
+  useEffect(() => {
+    console.log('[@@@ IS MENU OPEN CONTEXT] : ', menuContext.isMenuOpen);
+  }, [menuContext.isMenuOpen])
+
   return (
     <div className="header">
+      <NavMobile /> 
       <Logo />
-      <Hamburger />
+      <Hamburger toggleAction={menuContext.setIsMenuOpen} stateMenu={menuContext.isMenuOpen} />
     </div>
   );
 };

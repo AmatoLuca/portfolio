@@ -27,7 +27,6 @@
   --primaray-blacker-clr      : #000;
   --primary-black             : #212121 ;
   --light-silver-color        : rgba(255, 255, 255, .5);
-  --primary-bg-gradient       : radial-gradient(circle at 50%, transparent 50%, #000 100%), linear-gradient(to top, #0c0c0c 0%, #1e1e1e 100%); 
   --primary-bg-silver-gradient: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
 }
 
@@ -63,7 +62,7 @@ body {
 }
 
 @keyframes noisy {
-     0%, 100% { transform: translate(0, 0); }
+     /* 0%, 100% { transform: translate(0, 0); } */
      10% { transform: translate(-5%, -10%); }
      20% { transform: translate(-15%, 5%); }
      30% { transform: translate(7%, -25%); }

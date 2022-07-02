@@ -16,7 +16,7 @@ const Main = () => {
           <div className="dev-grt-1">Hi.</div>
           <div className="dev-grt-2">
            <span className="dev-pre">I am</span>
-           <sapn className="dev-name">Luca</sapn>
+           <span className="dev-name">Luca</span>
           </div>
         </div>
         <div className="dev-about">

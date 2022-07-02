@@ -1,36 +1,33 @@
 import React, { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
+
 import './hamburger.scss'
 
-const Hamburger = () => {
+const Hamburger = (props) => {
 
-  const[isToggleOn, setIsToggleOn] = useState(false)
-  const burgerTimeLine = gsap.timeline({ paused: true, reversed: true })
+  const isActive = useRef(false)
+
+  const burgerTimeLine = gsap.timeline({ paused: true })
 
   // GSAP references
-  let toggle = useRef(null)
   let line1 = useRef(null)
   let line2 = useRef(null)
   let line3 = useRef(null)
-
   
   const handleToggleClick = (e) => {  
-    console.log('[@@@ onClick] : ', e.target);
-    if (burgerTimeLine.isActive()) return false
-    toggleTween(burgerTimeLine)
+    isActive.current ? isActive.current = false : isActive.current = true 
+    console.log('[@@@ ACTIVE ] : ', isActive.current);
+    burgerTimeLine.reversed(!burgerTimeLine.reversed());
+    
   }
 
   useEffect(() => {
     burgerTimeLine.to(line2 , { duration: 0.06, opacity: 0, ease: "power4.out" })
       .to(line1, { duration: 0.06, rotate: 45, yPercent: 250, ease: "power4.out" })
       .to(line3, { duration: 0.06, rotate: -45, yPercent: -220, eas: "power4.out" }, '-=0.05')
-  }, [])
-
-  // Commute the reverse and play tween state
-  function toggleTween(tweenToggle) {
-    tweenToggle.reversed() ? tweenToggle.play() : tweenToggle.timeScale(1.5).reverse();
-  }
-  
+      burgerTimeLine.reverse();
+      // eslint-disable-next-line
+  }, [])  
 
   return (
     <div className='burger-button' onClick={handleToggleClick}>

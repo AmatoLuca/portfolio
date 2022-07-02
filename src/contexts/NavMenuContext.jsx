@@ -4,9 +4,9 @@ export const NavMenuContext = createContext()
 
 const NavMenuProvider = ({ children }) => {
 
-  const [fakeState, setFakeState] = useState('This is a fake state');
+  const[isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const defaultValue = {fakeState}
+  const defaultValue = { isMenuOpen, setIsMenuOpen }
 
   return (
     <NavMenuContext.Provider value={defaultValue}>

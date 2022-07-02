@@ -1,0 +1,40 @@
+.nav-mobile {
+   position        : fixed;
+   z-index         : 200;
+   top             : 0;
+   left            : 0;
+   right           : 0;
+   bottom          : 0;
+   height          : 100vh;
+   width           : 100vw;
+   background-image: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
+}
+
+.nav-mobile::before {
+    position           : absolute;
+    top                : -100%;
+    left               : -40%;
+    height             : 300%;
+    width              : 300%;
+    content            : "";
+    z-index            : 0;
+    opacity            : .15;
+    pointer-events     : none;
+    background-image   : url('../../assets/images/noise@2x.33312e6e.png');
+    background-repeat  : repeat;
+    background-position: 0 0;
+    background-size    : 200px auto;
+    animation          : noisy 1s steps(10) infinite;
+}
+
+@keyframes noisy {
+   10% { transform: translate(-5%, -10%); }
+   20% { transform: translate(-15%, 5%); }
+   30% { transform: translate(7%, -25%); }
+   40% { transform: translate(-5%, 25%); }
+   50% { transform: translate(-15%, 10%); }
+   60% { transform: translate(15%, 0%); }
+   70% { transform: translate(0%, 15%); }
+   80% { transform: translate(3%, 35%); }
+   90% { transform: translate(-10%, 10%); }
+}
