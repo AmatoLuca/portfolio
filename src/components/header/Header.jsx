@@ -1,15 +1,11 @@
 import React from "react"
-import Hamburger from "./Hamburger"
-import Logo from "./Logo"
+import HeaderController from "../../controllers/HeaderController"
 
 import './header.scss'
 
 const Header = () => {
   return (
-    <div className="header">
-      <Logo />
-      <Hamburger />
-    </div>
+    <HeaderController />
   );
 };
 

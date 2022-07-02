@@ -8,6 +8,11 @@
   src: url("./assets/fonts/DrukWide-Heavy.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "IntegralCF-Regular";
+  src: url("./assets/fonts/IntegralCF-Regular.otf") format("truetype");
+}
+
 *,
 *::before,
 *::after {
@@ -36,8 +41,7 @@ body {
 .App {
   background-image : radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
   height           : 100vh;
-  text-align       : center;
-  color            :palevioletred;
+  color            : var(--primaray-blacker-clr);
   width: 100vw;
 }
 

@@ -22,7 +22,7 @@ const Hamburger = () => {
 
   useEffect(() => {
     burgerTimeLine.to(line2 , { duration: 0.06, opacity: 0, ease: "power4.out" })
-      .to(line1, { duration: 0.06, rotate: 45, yPercent: 220, ease: "power4.out" })
+      .to(line1, { duration: 0.06, rotate: 45, yPercent: 250, ease: "power4.out" })
       .to(line3, { duration: 0.06, rotate: -45, yPercent: -220, eas: "power4.out" }, '-=0.05')
   }, [])
 
