@@ -6,7 +6,7 @@ const NavMenuProvider = ({ children }) => {
 
   const[isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const defaultValue = { isMenuOpen, setIsMenuOpen }
+  const defaultValue = { isMenuOpen, setIsMenuOpen}
 
   return (
     <NavMenuContext.Provider value={defaultValue}>

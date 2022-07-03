@@ -5,8 +5,9 @@
    left            : 0;
    right           : 0;
    bottom          : 0;
-   height          : 100vh;
+   height          : 0vh;
    width           : 100vw;
+   overflow        : hidden;
    background-image: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
 }
 

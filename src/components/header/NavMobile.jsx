@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 import './nav-mobile.scss'
 
-function NavMobile() {
+const NavMobile = forwardRef((props, ref) => {
   return (
-    <div className='nav-mobile'>
+    <div className='nav-mobile' ref={ref}>
       NavMobile
    </div>
   )
-}
+})
 
 export default NavMobile
