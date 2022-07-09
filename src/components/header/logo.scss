@@ -1,5 +1,7 @@
 .logo {
-   color: #fff;
+   color   : #fff;
+   position: relative;
+   z-index : 200 !important;
 
    span {
       display  : inline-block;

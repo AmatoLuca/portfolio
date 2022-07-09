@@ -5,7 +5,7 @@ import './header.scss'
 
 const Header = () => {
   return (
-    <HeaderController />
+      <HeaderController />
   );
 };
 

@@ -8,7 +8,72 @@
    height          : 0vh;
    width           : 100vw;
    overflow        : hidden;
-   background-image: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%);
+   /* background-image: radial-gradient(circle at 50%, transparent 60%, rgba(0, 0, 0, .35) 160%), radial-gradient(circle at 50%, #dbdcdc 40%, #acacac 140%); */
+   background-color: #dbdcdc ;
+   font-family     : "IntegralCF-Regular", Helvetica, sans-serif;
+   font-size       : 1.2rem;
+   color           : rgba(0, 0, 0, 0.75);
+   letter-spacing  : 0.20rem;
+   padding         : 0 5vw;
+
+   .nav-mobile__inner {
+      height         : 100%;
+      display        : flex;
+      flex-direction : column;
+      justify-content: center;
+      
+
+      a {
+         color          : inherit !important;
+         text-decoration: none;
+      }
+
+      .mobile-contacts {
+         font-size: 0.7rem;
+
+         .mobile-mail {
+            letter-spacing: 0.12rem;
+            padding       : 0.6rem 0;;
+            color: rgba(0, 0, 0, 0.45);
+         }
+
+         .mobile-phone {
+            padding   : 0.6rem 0;
+            color: rgba(0, 0, 0, 0.45);
+         }
+
+         span {
+            color: rgba(0, 0, 0, 0.75);;
+            transition: color .3s cubic-bezier(.165,.84,.44,1);
+
+            &:hover {
+               color: rgba(255, 255, 255, 0.90);
+               cursor: pointer;
+            }
+         }
+      }
+   
+      .nav-mobile__links {
+         display        : flex;
+         flex-direction : column;
+         align-items    : center;
+         justify-content: center;
+         list-style     : none;
+
+         .mobile-contact-label {
+            cursor: pointer;
+         }
+
+         li {
+            padding   : 0.6rem 0;
+            transition: color .3s cubic-bezier(.165,.84,.44,1);
+
+            &:hover {
+               color: rgba(255, 255, 255, 0.90);
+            }
+         }
+      }
+   }
 }
 
 .nav-mobile::before {

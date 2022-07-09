@@ -5,7 +5,6 @@ export const NavMenuContext = createContext()
 const NavMenuProvider = ({ children }) => {
 
   const[isMenuOpen, setIsMenuOpen] = useState(false)
-
   const defaultValue = { isMenuOpen, setIsMenuOpen}
 
   return (
